@@ -1,0 +1,352 @@
+:root {
+  --light-blue: #0098f1;
+  --light-grey: #e1e0e0;
+  --dark-blue: #001d64;
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url(fonts/Roboto-Bold.ttf);
+  src: url(fonts/Roboto-Light.ttf);
+  src: url(fonts/Roboto-Medium.ttf);
+  src: url(fonts/Roboto-Thin.ttf);
+  src: url(fonts/Roboto-Black.ttf);
+  src: url(fonts/Roboto-Regular.ttf);
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: var(--dark-blue);
+  color: white;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  padding-bottom: 10vh;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+header.header {
+  width: 90vw;
+  height: min(8vh, 100px);
+  background-color: white;
+  display: flex;
+  position: sticky;
+  top:0px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: var(--dark-blue) 3px solid;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+input {
+  background-color: transparent;
+  border-radius: 25px 0px 0px 25px;
+  height: 4vh;
+  max-height: 45px;
+  border: 3px solid var(--dark-blue);
+  width: min(35vw, 500px);
+  font-family: 'roboto';
+  color: var(--dark-blue);
+  font-size: min(3.5vw, 3vh);
+  padding-left: 2vw;
+  text-align: center;
+}
+input:focus-visible {
+  outline: none;
+}
+
+button.searchIcon {
+  border-radius: 0px 25px 25px 0px;
+  height: 4vh;
+  max-height: 45px;
+  width: 8vw;
+  max-width: 50px;
+  background-color: transparent;
+  border: 3px solid var(--dark-blue);
+  border-left: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img.searchIcon {
+  width: min(4vw, 25px);
+}
+
+div.search {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.wrapper {
+  margin-top: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstBlock, .stats, .forecast {
+  background-color: var(--light-blue);
+  border-radius: 25px;
+  width: 90vw;
+  max-width: 600px;
+  margin:2vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-family: "roboto";
+  height: min(60vh,800px);
+}
+
+.stats {
+  border-radius: 25px 25px 10px 10px;
+}
+
+.stats {
+  height: min(40vh,550px);
+  margin-top: 0px;
+}
+
+.forecast {
+  height: min(25vh,250px);
+  margin-bottom: 0px;
+  border-radius: 10px 10px 25px 25px;
+}
+
+@media screen and (max-width: 1429px) {
+  .firstBlock {
+    border-radius: 25px 25px 10px 10px;
+  }
+  .stats {
+    border-radius: 10px;
+  }
+
+}
+
+.location {
+  font-size: min(8vw,50px);
+}
+
+.temperature {
+  width: 60%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: min(8vw,50px);
+  gap:2vw;
+  background-color: #001d64;
+}
+
+.currentTemperature {
+  margin:0px;
+}
+
+.moreInfo {
+  font-size: min(4vw, 20px);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap:2vw;
+  margin-bottom: min(3.5vw, 1.5vh);
+  align-items: center;
+}
+.weatherCondition {
+  font-weight: 900;
+  font-size: min(5vw, 35px);
+}
+
+img {
+  width: min(64px,10vw);
+}
+
+.maxMinTemperature {
+ width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.minTemperature, .maxTemperature {
+  font-size: min(6vw,40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: 2vw;
+}
+
+div.sunrise, div.sunset {
+  font-size: min(2vw, 15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.riseSet {
+  width: 90%;
+  border-radius: 25px;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  color: var(--light-blue);
+  margin-bottom: 1vw;
+}
+
+div.container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border-radius: 25px;
+}
+
+h1.moreDetails {
+  margin: 0;
+}
+
+.statElement {
+  width: 100%;
+  height: min(5vh, 70px);
+  border-bottom: 1px solid var(--light-grey);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--light-blue);
+  padding: 1.5vw;
+  padding-right: 2.5vw;
+  font-size: min(3vw, 20px);
+}
+
+.value {
+  font-size: min(4vw, 25px);
+
+}
+
+.last {
+  border: none;
+}
+
+.unit {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: min(30vw, 150px);
+  height: min(7vw, 50px);
+  border-radius: 25px;
+  border: none;
+  background-color: white;
+  color: var(--light-blue);
+  font-size: min(4vw, 20px);
+}
+button:hover {
+  background-color: var(--light-grey);
+}
+
+button.active {
+  background-color: var(--dark-blue);
+  color: white;
+}
+
+img.statShowcase {
+  height: min(4vh, 50px);
+  flex-grow: 0;
+}
+
+.noMargin {
+  margin: 0px;
+}
+
+.container.spaceBetween {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: var(--light-blue);
+  color: white;
+}
+
+.spaceBetween button {
+  width: min(20vw, 100px);
+}
+
+.scrollcontainer {
+  overflow-x: auto;
+  width: 80%;
+  height: min(15vh,150px);
+  background-color: white;
+  border-radius: 25px;
+  margin-bottom: 1vh;
+  border: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap:2vw;
+}
+
+.scrollcontainer::-webkit-scrollbar {
+  width: 4px;
+  background-color: var(--light-grey);
+  border-radius: 50px;
+  border: none;
+
+}
+
+.scrollcontainer::-webkit-scrollbar-thumb {
+  width: 4px;
+  background-color: var(--dark-blue);
+  border-radius: 50px;
+  border: none;
+}
+
+.card {
+  background-color: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: min(12vh,120px);
+  border-radius: 25px;
+  color: var(--light-blue);
+  padding: min(1vw,4px);
+  margin-left: min(2vw,15px);
+  margin-right:  min(2vw,15px);
+  width: min(25vw, 100px);
+  flex-shrink: 0;
+}
+
+.card p {
+  margin: 0px
+}
