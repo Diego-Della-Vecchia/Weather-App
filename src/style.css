@@ -42,7 +42,7 @@ header.header {
   background-color: white;
   display: flex;
   position: sticky;
-  top:0px;
+  top: 0px;
   justify-content: center;
   align-items: center;
   border-bottom: var(--dark-blue) 3px solid;
@@ -98,7 +98,6 @@ body {
   flex-direction: column;
 }
 
-
 .wrapper {
   margin-top: 5vh;
   display: flex;
@@ -107,32 +106,37 @@ body {
   align-items: center;
 }
 
-.firstBlock, .stats, .forecast {
+.firstBlock,
+.stats,
+.forecast {
   background-color: var(--light-blue);
   border-radius: 25px;
   width: 90vw;
   max-width: 600px;
-  margin:2vw;
+  margin: 2vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   color: white;
-  font-family: "roboto";
-  height: min(60vh,800px);
+  font-family: 'roboto';
+  height: min(65vh, 850px);
 }
 
 .stats {
   border-radius: 25px 25px 10px 10px;
 }
 
+.location {
+  text-align: center;
+}
 .stats {
-  height: min(40vh,550px);
+  height: min(42vh, 570px);
   margin-top: 0px;
 }
 
 .forecast {
-  height: min(25vh,250px);
+  height: min(30vh, 300px);
   margin-bottom: 0px;
   border-radius: 10px 10px 25px 25px;
 }
@@ -144,11 +148,10 @@ body {
   .stats {
     border-radius: 10px;
   }
-
 }
 
 .location {
-  font-size: min(8vw,50px);
+  font-size: min(8vw, 50px);
 }
 
 .temperature {
@@ -158,16 +161,16 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  font-size: min(8vw,50px);
-  gap:2vw;
+  font-size: min(8vw, 50px);
+  gap: 2vw;
   background-color: #001d64;
 }
 
 .currentTemperature {
-  margin:0px;
+  margin: 0px;
 }
 
-.wrapper >.weatherIcon {
+.wrapper > .weatherIcon {
   width: 100px;
 }
 
@@ -177,7 +180,7 @@ body {
   width: 100%;
   flex-direction: column;
   justify-content: center;
-  gap:2vw;
+  gap: 2vw;
   margin-bottom: min(3.5vw, 1.5vh);
   align-items: center;
 }
@@ -187,25 +190,27 @@ body {
 }
 
 img {
-  width: min(64px,10vw);
+  width: min(64px, 10vw);
 }
 
 .maxMinTemperature {
- width: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.minTemperature, .maxTemperature {
-  font-size: min(6vw,40px);
+.minTemperature,
+.maxTemperature {
+  font-size: min(6vw, 40px);
   display: flex;
   justify-content: center;
   align-items: center;
   grid-area: 2vw;
 }
 
-div.sunrise, div.sunset {
+div.sunrise,
+div.sunset {
   font-size: min(2vw, 15px);
   display: flex;
   justify-content: center;
@@ -252,7 +257,6 @@ h1.moreDetails {
 
 .value {
   font-size: min(4vw, 25px);
-
 }
 
 .last {
@@ -309,7 +313,7 @@ img.statShowcase {
 .scrollcontainer {
   overflow-x: auto;
   width: 85%;
-  height: min(15vh,150px);
+  height: min(16vh, 160px);
   background-color: white;
   border-radius: 25px;
   margin-bottom: 1vh;
@@ -317,7 +321,7 @@ img.statShowcase {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap:2vw;
+  gap: 2vw;
 }
 
 .scrollcontainer::-webkit-scrollbar {
@@ -325,7 +329,6 @@ img.statShowcase {
   background-color: var(--light-grey);
   border-radius: 50px;
   border: none;
-
 }
 
 .scrollcontainer::-webkit-scrollbar-thumb {
@@ -341,16 +344,33 @@ img.statShowcase {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: min(12vh,120px);
+  height: min(13vh, 125px);
   border-radius: 25px;
   color: var(--light-blue);
-  padding: min(1vw,4px);
-  margin-left: min(2vw,15px);
-  margin-right:  min(2vw,15px);
-  width: min(25vw, 100px);
+  padding: min(1vw, 4px);
+  margin-left: min(2vw, 15px);
+  margin-right: min(2vw, 15px);
+  width: min(30vw, 125px);
   flex-shrink: 0;
+  text-align: center;
 }
 
 .card p {
-  margin: 0px
+  margin: 0px;
+}
+
+.error {
+  position: fixed;
+  top: 20vh;
+  width: 90vw;
+  max-width: 500px;
+  background-color: var(--dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: min(1vw, 4px) solid white;
+  color: white;
+  border-radius: 25px;
+  font-family: 'roboto';
 }
