@@ -1,3 +1,5 @@
+import api from './api' 
+
 const  page  = {
     searchbar : document.querySelector('#searchbar'),
     search : document.querySelector('.searchIcon'),
@@ -36,26 +38,29 @@ const update = {
         }
         page.city.textContent = data.location.name
         page.country.textContent = data.location.country
-        page.currentTemperature.textContent = data.current[`temp_${  tempUnit}`]
+        page.currentTemperature.textContent = `${data.current[`temp_${  tempUnit}`] + tempUnit  }°`
         page.weatherIcon.src = data.current.condition.icon
         page.weatherCondition.textContent = data.current.condition.text
         if(unit ==='imperial') {
             page.feelsLike.textContent = `${data.current[`feelslike_${tempUnit}`]  }f°`;
             page.minTemperature.textContent = `${data.forecast.forecastday[0].day[`mintemp_${tempUnit}`]  }f°`
             page.maxTemperature.textContent = `${data.forecast.forecastday[0].day[`maxtemp_${tempUnit}`]  }f°`
+            page.sunrise.textContent = data.forecast.forecastday[0].astro.sunrise
+            page.sunset.textContent = data.forecast.forecastday[0].astro.sunset
         }
         else if(unit ==='metric') {
             page.feelsLike.textContent = `${data.current[`feelslike_${tempUnit}`]  }c°`;
             page.minTemperature.textContent = `${data.forecast.forecastday[0].day[`mintemp_${tempUnit}`]  }c°`
             page.maxTemperature.textContent = `${data.forecast.forecastday[0].day[`maxtemp_${tempUnit}`]  }c°`
+            page.sunrise.textContent = data.forecast.forecastday[0].astro.sunrise.replace('AM', '')
+            page.sunset.textContent = api.convertTime(data.forecast.forecastday[0].astro.sunset)
         }
-        page.sunrise.textContent = data.forecast.forecastday[0].astro.sunrise
-        page.sunset.textContent = data.forecast.forecastday[0].astro.sunset
         page.humidity.textContent = data.current.humidity
         page.windSpeed.textContent = data.current[`wind_${speedUnit}`]
         page.rainChance.textContent = `${data.forecast.forecastday[0].day.daily_chance_of_rain  }%`
         page.uvIndex.textContent = data.forecast.forecastday[0].day.uv
-    }
+    },
+    
 }
 
 export {page, update}
