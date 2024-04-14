@@ -9,7 +9,6 @@ function getNewData(location) {
     .then((response) => response.json())
     .then((response) => {
       data.response = response;
-      console.log(response);
       data.location = response.location.name;
       update.page(data.unit, response);
       return response;
