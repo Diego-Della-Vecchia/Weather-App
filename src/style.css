@@ -167,6 +167,10 @@ body {
   margin:0px;
 }
 
+.wrapper >.weatherIcon {
+  width: 100px;
+}
+
 .moreInfo {
   font-size: min(4vw, 20px);
   display: flex;
@@ -211,7 +215,7 @@ div.sunrise, div.sunset {
 .riseSet {
   width: 90%;
   border-radius: 25px;
-  height: 10%;
+  height: 13%;
   display: flex;
   justify-content: space-around;
   background-color: white;
@@ -220,7 +224,7 @@ div.sunrise, div.sunset {
 }
 
 div.container {
-  width: 80%;
+  width: 85%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -256,7 +260,7 @@ h1.moreDetails {
 }
 
 .unit {
-  width: 80%;
+  width: 85%;
   display: flex;
   justify-content: space-between;
 }
@@ -304,7 +308,7 @@ img.statShowcase {
 
 .scrollcontainer {
   overflow-x: auto;
-  width: 80%;
+  width: 85%;
   height: min(15vh,150px);
   background-color: white;
   border-radius: 25px;
